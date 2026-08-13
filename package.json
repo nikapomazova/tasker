@@ -1,0 +1,7 @@
+{
+  "name": "tasker-garden",
+  "private": true,
+  "scripts": {
+    "test": "node tests/structure.test.js && node tests/physics.test.js && node tests/game.test.js"
+  }
+}

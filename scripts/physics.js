@@ -1,4 +1,4 @@
-// Lightweight 2D platform physics. This file knows nothing about Tasker images.
+// Lightweight 2D physics
 (function () {
   class TaskerPhysics {
     constructor(options) {

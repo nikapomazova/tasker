@@ -1,0 +1,74 @@
+.quest-dialog { width: min(520px, calc(100vw - 28px)); max-height: calc(100vh - 30px); padding: 24px; overflow-y: auto; border: 0; border-radius: 27px; background: #fffaf5; color: var(--ink); box-shadow: 0 26px 90px rgba(55,44,65,.28); }
+.quest-dialog::backdrop { background: rgba(54,45,61,.38); backdrop-filter: blur(5px); }
+.dialog-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; }
+.dialog-title-row h2 { margin: 3px 0 16px; }
+.quest-form { display: grid; gap: 14px; }
+.quest-form > label { display: grid; gap: 6px; color: var(--muted); font-size: 11px; font-weight: 800; }
+.quest-form input[type="text"], .quest-form input:not([type]), .quest-form select, .quest-form input[type="number"] { width: 100%; padding: 10px 11px; border: 1px solid var(--line); border-radius: 11px; background: #fff; color: var(--ink); }
+.group-combobox { position: relative; display: block; }
+.group-options { position: absolute; z-index: 20; top: calc(100% + 5px); left: 0; right: 0; max-height: 180px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 5px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 14px 30px rgba(55,44,65,.16); }
+.group-options[hidden] { display: none; }
+.group-option { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 5px; }
+.group-option button { border: 0; background: transparent; cursor: pointer; }
+.choose-group { padding: 9px; border-radius: 8px !important; color: var(--ink); text-align: left; }
+.choose-group:hover { background: #f0ebf7; }
+.delete-group { width: 29px; height: 29px; border-radius: 50%; color: #a66a7b; font-size: 17px; }
+.delete-group:hover { background: #fae5e9; }
+.choose-group,
+.choose-duration {
+  font-family: ui-rounded, "Nunito", "Avenir Next", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: normal;
+}
+.group-options,
+.duration-options {
+  font-family: ui-rounded, "Nunito", "Avenir Next", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+}
+.group-option button,
+.duration-option button {
+  grid-row: auto;
+  box-shadow: none;
+  transition: none;
+}
+.group-option .delete-group,
+.duration-option .delete-duration {
+  padding: 0;
+  font-family: ui-rounded, "Nunito", "Avenir Next", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: normal;
+}
+.no-groups { display: block; padding: 12px; color: var(--muted); text-align: center; font-size: 11px; font-weight: 500; }
+.quest-form fieldset { min-width: 0; padding: 0; border: 0; }
+.quest-form legend { margin-bottom: 8px; color: var(--ink); font-size: 12px; font-weight: 900; }
+.quest-form legend small { color: var(--muted); font-weight: 500; }
+.weekday-picker { display: flex; justify-content: space-between; gap: 6px; }
+.weekday-picker input { position: absolute; opacity: 0; }
+.weekday-picker span { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: #fff; cursor: pointer; font-size: 11px; font-weight: 900; }
+.weekday-picker input:checked + span { border-color: #8174ba; background: var(--lilac); color: #625590; }
+.quest-type-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.quest-type-options input { position: absolute; opacity: 0; }
+.quest-type-options span { display: grid; gap: 2px; padding: 11px; border: 1px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; }
+.quest-type-options input:checked + span { border-color: #8174ba; background: #f0ebfb; }
+.quest-type-options small { color: var(--muted); }
+.quest-form .duration-field { display: grid; gap: 6px; }
+.quest-form .duration-field[hidden] { display: none; }
+.create-quest-button { width: 100%; min-height: 48px; }
+.quest-detail-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+.quest-detail-summary span { padding: 10px; border-radius: 12px; background: var(--lilac); font-size: 10px; }
+.quest-detail-summary strong { display: block; font-size: 17px; }
+.history-list { display: grid; gap: 7px; padding: 0; list-style: none; }
+.history-list li { display: flex; justify-content: space-between; gap: 10px; padding: 9px 10px; border-radius: 10px; background: #f4eff4; font-size: 11px; }
+.history-empty { padding: 25px; text-align: center; color: var(--muted); }
+.edit-quest-button { width: 100%; min-height: 48px; margin-top: 14px; }
+.confirm-actions { display: flex; justify-content: center; gap: 9px; margin-top: 18px; }
+.danger-button { min-height: 42px; padding: 10px 14px; border: 0; border-radius: 12px; background: #b9556d; color: white; cursor: pointer; font-weight: 900; box-shadow: 0 5px 14px rgba(71,57,80,.06); transition: transform 160ms ease; }
+.danger-button:hover { transform: translateY(2px); }
+
